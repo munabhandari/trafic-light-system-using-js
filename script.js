@@ -1,43 +1,24 @@
 function trafficLightCycle() {
-
     var greenLight = document.querySelector('.green');
     var yellowLight = document.querySelector('.yellow');
     var redLight = document.querySelector('.red');
 
-    setTimeout(function () {
-        greenLight.classList.add('on')
-        greenLight.classList.remove('off')
-    }, 0);
+    triggerLight(greenLight, 0, 2000)
+    triggerLight(yellowLight, 2000, 4000)
+    triggerLight(redLight, 4000, 6000)
+}
 
-
+function triggerLight(light, startTime, endTime) {
     setTimeout(function () {
-        greenLight.classList.add('off')
-        greenLight.classList.remove('on')
-    }, 2000);
-
-    setTimeout(function () {
-        yellowLight.classList.add('on')
-        yellowLight.classList.remove('off')
-    }, 2000);
+        light.classList.add('on')
+        light.classList.remove('off')
+    }, startTime);
 
 
     setTimeout(function () {
-        yellowLight.classList.add('off')
-        yellowLight.classList.remove('on')
-    }, 4000);
-
-    setTimeout(function () {
-        redLight.classList.add('on')
-        redLight.classList.remove('off')
-    }, 4000);
-
-
-    setTimeout(function () {
-        redLight.classList.add('off')
-        redLight.classList.remove('on')
-    }, 6000);
-
-
+        light.classList.add('off')
+        light.classList.remove('on')
+    }, endTime);
 }
 
 trafficLightCycle();
