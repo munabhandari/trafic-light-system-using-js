@@ -67,7 +67,23 @@ body {
     position: absolute;
     bottom: 50px;
     right: 0px;
+
+    animation-name: example;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
 }
+
+
+@keyframes example {
+    0% {
+        right: 0px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
 
 
 .car img {
