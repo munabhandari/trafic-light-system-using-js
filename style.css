@@ -1,3 +1,7 @@
+body {
+    position: relative;
+}
+
 #traffic-light {
     border: 1px solid black;
     background: black;
@@ -12,19 +16,61 @@
     border-radius: 100%;
     margin: 10px;
 }
-.red{
+
+.red {
     background-color: red;
 }
-.yellow{
+
+.yellow {
     background-color: yellow;
 }
-.green{
+
+.green {
     background-color: green;
 }
-.stand{
-    height:300px;
+
+.off{
+    filter: brightness(0.5);
+}
+
+.on{
+    filter: brightness(1);
+}
+
+.stand {
+    height: 300px;
     width: 30px;
     background: black;
     margin-top: -5px;
     margin-left: 47px;
 }
+
+.black {
+    background: black;
+}
+
+.line {
+    height: 30px;
+    width: 400px;
+}
+
+.zebra-border {
+    background: black;
+    height: 200px;
+    width: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 460px;
+}
+
+.car {
+    position: absolute;
+    bottom: 50px;
+    right: 0px;
+}
+
+
+.car img {
+    width: 200px;
+}
+
